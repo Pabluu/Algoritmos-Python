@@ -33,9 +33,6 @@ if "__main__" == __name__:
     if(opcao not in ['c', 'd', 'criptar', 'descriptar']):
         exit(f"Opção não disponível: {opcao!r}")
 
-    '''
-    O Iftm É Um Bom Lugar Para Estudar
-       L  dOmm rauf ogasrIÉBuPEatUmart*'''
 
     chave = list(input('Chave: ').lower())
     frase = input('Frase: ')
@@ -56,9 +53,11 @@ if "__main__" == __name__:
     caracteres = tam_chave * qtd_linhas
 
     if(opcao == 'c' or opcao == 'criptar'):
+        print("Frase Cifrado: ", end='')
         resultado = criptar(frase)
 
     else:
+        print("Frase Descifrado: ", end='')
         resultado = descriptar(frase).replace('*', '')
 
-    print(f'"{resultado}"')
+    print(f'{resultado!r}')
